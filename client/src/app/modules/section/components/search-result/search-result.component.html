@@ -1,0 +1,11 @@
+<div class="container-fluid">
+  <header class="page-header">
+    <a [routerLink]="['/home']" class="previous">&#8249;</a>
+    <h1>Search Results
+    </h1>
+  </header>
+  <ul class="article-list">
+    <li class="article-list-item" *ngFor="let article of articles"><a [routerLink]="['/home/article', article._id]">{{article.title}}</a></li>
+  </ul>
+  <p *ngIf="!articles?.length">No results for "{{msg}}"</p>
+</div>

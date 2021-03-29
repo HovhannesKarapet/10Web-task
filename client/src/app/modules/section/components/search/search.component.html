@@ -1,0 +1,10 @@
+<div class="search-container">
+  <form [formGroup]="form" (ngSubmit)="redirect()">
+    <input formControlName="search" #search_element type="text" class="form-control" placeholder="search" (keyup)="search()">
+  </form>
+  <div class="results" *ngIf="show">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let article of results"><a  [routerLink]="['/home/article', article._id]">{{article.title}}</a></li>
+    </ul>
+  </div>
+</div>

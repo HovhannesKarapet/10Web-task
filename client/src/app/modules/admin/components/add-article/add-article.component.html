@@ -1,0 +1,20 @@
+<form [formGroup]="form">
+  <div class="form-group">
+    <select formControlName="section_id" class="form-select mb-3">
+      <option value="null" disabled selected>select section</option>
+      <option *ngFor="let section of sections" value="{{section._id}}">
+        {{section.name}}
+      </option>
+    </select>
+    <div class="mb-3">
+      <label class="form-label" for="title">title:</label>
+      <input formControlName="title" type="text" id="title" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label class="form-label" for="body">body:</label>
+      <ejs-richtexteditor id="body" formControlName="body">
+      </ejs-richtexteditor>
+    </div>
+    <button class="btn btn-primary" [disabled]="form.invalid || disable" (click)="create()">add</button>
+  </div>
+</form>

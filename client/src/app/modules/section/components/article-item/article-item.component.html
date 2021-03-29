@@ -1,0 +1,8 @@
+<div class="container-fluid">
+  <header class="page-header">
+    <a [routerLink]="['/home/section', article?.section_id]" class="previous">&#8249;</a>
+    <h1>{{article?.title}}
+    </h1>
+  </header>
+  <div [innerHTML]="article?.body | noSanitize"></div>
+</div>

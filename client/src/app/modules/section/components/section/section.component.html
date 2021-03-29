@@ -1,0 +1,3 @@
+<div class="container-fluid">
+  <a *ngFor="let section of sections" [routerLink]="['section', section._id]">{{section.name}}</a>
+</div>

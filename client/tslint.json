@@ -1,0 +1,7 @@
+{
+  "extends": [],
+  "rulesDirectory": [
+    "codelyzer"
+  ],
+  "rules": {}
+}

@@ -1,0 +1,33 @@
+.container-fluid {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  a {
+    font-size: 24px;
+    color: #323A45;
+    font-weight: bold;
+    display: inline-block;
+    margin: 5px auto;
+    padding: 34px 0;
+    width: 374px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgb(229 230 232 / 40%);
+    border-radius: 15px;
+    text-decoration: none;
+    line-height: 32px;
+    &:hover {
+      color: #fff;
+      background-image: linear-gradient(to right, #4786FF, #5A66F5, #6454F0);
+    }
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .container-fluid{
+    grid-template-columns: auto;
+    a{
+      width: 280px;
+    }
+  }
+}
