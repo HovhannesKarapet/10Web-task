@@ -11,7 +11,7 @@ import {Router} from "@angular/router";
 })
 export class SearchComponent implements OnInit {
 
-  results !: ArticleModel[];
+  results !: {id: number, title: string, body: string}[];
   show: boolean = false;
 
   form: FormGroup = new FormGroup({

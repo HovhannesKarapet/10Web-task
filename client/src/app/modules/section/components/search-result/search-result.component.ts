@@ -10,7 +10,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class SearchResultComponent implements OnInit {
 
-  articles !: ArticleModel[];
+  articles !: {id: number, title: string, body: string}[];
   msg !: string;
 
   constructor(

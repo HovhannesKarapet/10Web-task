@@ -4,7 +4,7 @@
   </form>
   <div class="results" *ngIf="show">
     <ul class="list-group">
-      <li class="list-group-item" *ngFor="let article of results"><a  [routerLink]="['/home/article', article._id]">{{article.title}}</a></li>
+      <li class="list-group-item" *ngFor="let article of results"><a  [routerLink]="['/home/article', article.id]">{{article.title}}</a></li>
     </ul>
   </div>
 </div>

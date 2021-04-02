@@ -10,8 +10,7 @@ import {ArticleModel} from "../../../../models/Article.model";
 })
 export class ArticleComponent implements OnInit {
 
-  title !: string;
-  articles !: ArticleModel[];
+  article !: {id: number, title: string, body: string};
 
   constructor(
     private articleService: ArticleService,
@@ -20,14 +19,13 @@ export class ArticleComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      this.getArticles(params.id);
+      this.getArticle(params.id);
     });
   }
 
-  getArticles(id: string): void {
-    this.articleService.getArticleList(id).subscribe((data) => {
-      this.title = data.section_name;
-      this.articles = data.articles;
+  getArticle(id: number): void {
+    this.articleService.getArticle(id).subscribe((data) => {
+      this.article = data;
     });
   }
 }

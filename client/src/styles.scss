@@ -21,6 +21,9 @@ body {
   font-weight: 400;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  img, iframe {
+    max-width: 100% !important;
+  }
 }
 .container-fluid {
   padding: 0;
